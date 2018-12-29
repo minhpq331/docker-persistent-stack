@@ -1,0 +1,16 @@
+    # All option with comment is optional, to use it, just uncomment it
+    mysql:
+        container_name: mysql
+        image: mysql
+        volumes:
+            - ./data/mysql:/var/lib/mysql
+            # You can custom mysql config, too
+            # - ./data/config/mysql/my.cnf:/etc/mysql/my.cnf
+        user: "${UID_GID}"
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: 'somepassword'
+        networks:
+            - common
+        restart: always
