@@ -1,0 +1,15 @@
+    # All option with comment is optional, to use it, just uncomment it
+    redis:
+        container_name: redis
+        image: redis:alpine
+        command: ["redis-server", "--appendonly", "yes"]
+        volumes:
+            - ./data/redis:/data
+            # If you want to custom redis config, edit file in config folder and uncomment following line
+            # - ./config/redis/redis.conf:/usr/local/etc/redis/redis.conf
+        user: "${UID_GID}"
+        ports:
+            - "6379:6379"
+        networks:
+            - common
+        restart: always
