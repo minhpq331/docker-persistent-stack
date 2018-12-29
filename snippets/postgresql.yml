@@ -1,0 +1,23 @@
+    # All option with comment is optional, to use it, just uncomment it
+    postgresql:
+        container_name: postgresql
+        image: postgres:alpine
+        volumes:
+            #  You need to create data/postgresql/pgdata folder manually or this will error
+            - ./data/postgresql/pgdata:/var/lib/postgresql/data
+            # Need to mound passwd to use user option
+            - /etc/passwd:/etc/passwd:ro
+            # If you want to create multiple database, mount this folder
+            # - ./config/postgresql/init_script:/docker-entrypoint-initdb.d
+        user: "${UID_GID}"
+        ports:
+            - "5432:5432"
+        environment: 
+            - POSTGRES_USER=someuser
+            - POSTGRES_PASSWORD=somepassword
+            # - POSTGRES_DB=default
+            # If you want to create multiple database, uncomment this line
+            # - POSTGRES_MULTIPLE_DATABASES=db1,db2,db3
+        networks:
+            - common
+        restart: always
