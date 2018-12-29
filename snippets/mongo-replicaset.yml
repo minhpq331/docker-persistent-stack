@@ -1,0 +1,15 @@
+    # All option with comment is optional, to use it, just uncomment it
+    mongo-rs:
+        container_name: mongo-rs
+        image: minhpq331/mongo-local-replicaset
+        hostname: mongo-rs
+        volumes:
+            - ./data/mongo-rs:/data
+        user: "${UID_GID}"
+        ports:
+            - "27001:27001"
+            - "27002:27002"
+            - "27003:27003"
+        networks:
+            - common
+        restart: always
