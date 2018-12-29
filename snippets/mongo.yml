@@ -1,0 +1,17 @@
+    # All option with comment is optional, to use it, just uncomment it
+    mongo:
+        container_name: mongo
+        image: mongo:latest
+        volumes:
+            - ./data/mongo:/data/db
+            # If you want to custom mogno config, edit file in config folder and uncomment following line
+            # - ./config/mongo/mongod.conf:/etc/mongo/mongod.conf
+        user: "${UID_GID}"
+        # environment:
+        #     MONGO_INITDB_ROOT_USERNAME: root
+        #     MONGO_INITDB_ROOT_PASSWORD: somepass
+        ports:
+            - "27017:27017"
+        networks:
+            - common
+        restart: always   
