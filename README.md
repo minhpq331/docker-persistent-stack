@@ -15,13 +15,13 @@ Docker resources to create persistent stack for development purpose with 1 comma
 
 It's easy, just follow these steps:
 
-Clone this repository:
+**Clone this repository:**
 ```bash
 $ git clone https://github.com/minhpq331/docker-persistent-stack.git
 $ cd docker-persistent-stack
 ```
 
-Make environment file, change your compose project name and put your `uid` and `gid` in
+**Make environment file, change your compose project name and put your `uid` and `gid` in**
 ```bash
 $ cp .env.example .env
 $ echo $(id -u):$(id -g)
@@ -29,7 +29,7 @@ $ echo $(id -u):$(id -g)
 # This is your uid and gid, copy all this line and paste it in .env file
 ```
 
-Choose your persistent stack from available snippets or write yours. Put it in `docker-compose.yml`
+**Choose your persistent stack from available snippets or write yours. Put it in `docker-compose.yml`**
 
 ```yml
 version: '2'
@@ -64,7 +64,7 @@ networks:
     common:
 ```
 
-Start docker compose
+**Start docker compose**
 
 ```bash
 $ docker-compose up
