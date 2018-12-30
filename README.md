@@ -11,7 +11,6 @@ Docker resources to create persistent stack for development purpose with 1 comma
 [ ] Neo4J
 [ ] RabbitMQ
 
-
 ## How to use
 
 It's easy, just follow these steps:
