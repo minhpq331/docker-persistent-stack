@@ -1,6 +1,17 @@
 # Docker Persistent Stack
 Docker resources to create persistent stack for development purpose with 1 command
 
+## Available snippets
+
+[x] [MongoDB](./snippets/mongo.yml)
+[x] [MongoDB Local replicaset](./snippets/mongo-replicaset.yml)
+[x] [Redis](./snippets/redis.yml)
+[x] [MySQL](./snippets/mysql.yml)
+[x] [PostgreSQL](./snippets/postgresql.yml)
+[ ] Neo4J
+[ ] RabbitMQ
+
+
 ## How to use
 
 It's easy, just follow these steps:
