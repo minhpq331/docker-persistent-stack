@@ -3,13 +3,13 @@ Docker resources to create persistent stack for development purpose with 1 comma
 
 ## Available snippets
 
-[x] [MongoDB](./snippets/mongo.yml)
-[x] [MongoDB Local replicaset](./snippets/mongo-replicaset.yml)
-[x] [Redis](./snippets/redis.yml)
-[x] [MySQL](./snippets/mysql.yml)
-[x] [PostgreSQL](./snippets/postgresql.yml)
-[ ] Neo4J
-[ ] RabbitMQ
+- [x] [MongoDB](./snippets/mongo.yml)
+- [x] [MongoDB Local replicaset](./snippets/mongo-replicaset.yml)
+- [x] [Redis](./snippets/redis.yml)
+- [x] [MySQL](./snippets/mysql.yml)
+- [x] [PostgreSQL](./snippets/postgresql.yml)
+- [ ] Neo4J
+- [ ] RabbitMQ
 
 ## How to use
 
