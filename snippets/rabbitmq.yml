@@ -1,0 +1,17 @@
+    # All option with comment is optional, to use it, just uncomment it
+    rabbitmq:
+        container_name: rabbitmq
+        image: rabbitmq:management-alpine
+        volumes:
+            - ./data/rabbitmq:/var/lib/rabbitmq
+        user: "${UID_GID}"
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        # environment:
+        #     - RABBITMQ_DEFAULT_USER=admin
+        #     - RABBITMQ_DEFAULT_PASS=password
+        #     - RABBITMQ_DEFAULT_VHOST=myvhost
+        networks:
+            - common
+        restart: always
