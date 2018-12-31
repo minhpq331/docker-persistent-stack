@@ -8,8 +8,8 @@ Docker resources to create persistent stack for development purpose with 1 comma
 - [x] [Redis](./snippets/redis.yml)
 - [x] [MySQL](./snippets/mysql.yml)
 - [x] [PostgreSQL](./snippets/postgresql.yml)
-- [ ] Neo4J
-- [ ] RabbitMQ
+- [x] [Neo4J](./snippets/neo4j.yml)
+- [x] [RabbitMQ](./snippets/rabbitmq.yml)
 
 ## How to use
 
