@@ -1,0 +1,15 @@
+    # All option with comment is optional, to use it, just uncomment it
+    neo4j:
+        container_name: neo4j
+        image: neo4j
+        volumes:
+            - ./data/neo4j:/data
+        user: "${UID_GID}"
+        ports:
+            - "7474:7474"
+            - "7687:7687"
+        # environment:
+        #     - NEO4J_AUTH=none
+        networks:
+            - common
+        restart: always
